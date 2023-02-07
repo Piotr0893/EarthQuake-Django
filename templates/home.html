@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %} EarthQuakes {% endblock %}</title>
+   
+</head>
+<body>
+
+  {% block content %}
+  <div class="home">
+    <h1 align='center'>Welcome to my page about EarthQuakes</h1>
+    <table style="width:100%;">
+      <tr>
+        <td style="width:33%; text-align:center;">
+          <h2>Here you can you can see last 1h EarthQuakes<h2>
+            <p>Go to <a href="/Last1Hour"> Last 1h EarthQuake Page</a></p>
+        </td>
+        <td style="width:33%; text-align:center;">
+          <h2>Here you can you can see last 24h EarthQuakes<h2>
+            <p> Go to <a href="/EarthQuakes"> Last 24h EarthQuake Page</a></p>
+        </td>
+        tr>
+        <td style="width:33%; text-align:center;">
+          <h2>Here you can you can see last 7 days EarthQuakes<h2>
+            <p>Go to <a href="/Last7Days"> Last 7Days EarthQuake Page</a></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  {% endblock %}   
+
+  
+</body>
+</html>
+
+
+
