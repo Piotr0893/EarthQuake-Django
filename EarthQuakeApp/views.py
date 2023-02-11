@@ -6,7 +6,7 @@ import datetime
 
 
 # Create your views here.
-def Last24EarthQuakes(request):
+def Last24Hours(request):
     urlData ="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"          # URL for the earthquake data API  
     webURL = urllib.request.urlopen(urlData)                                                     
     data = webURL.read()   
@@ -19,7 +19,7 @@ def Last24EarthQuakes(request):
             magnitude = earthquake['properties']['mag']     # Get the magnitude of the earthquake
                    # Get the time of the earthquake
             earthquakes_data.append({'place': place, 'magnitude': magnitude,})
-    return render(request, 'EarthQuakes.html', {'json_data': earthquakes_data})       
+    return render(request, 'Last24Hours.html', {'json_data': earthquakes_data})       
 
 
 
