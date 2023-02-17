@@ -1,5 +1,7 @@
+{% extends "base.html" %}
 
-<h1>Last 7 days Earthquakes Data</h1>
+{% block content %}
+<h1>Last Week Earthquakes Data</h1>
 <table>
   <tr>
     <th>Place</th>
@@ -14,3 +16,4 @@
   </tr>
   {% endfor %}
 </table>
+{% endblock  %}

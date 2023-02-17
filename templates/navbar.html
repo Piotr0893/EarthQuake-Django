@@ -6,12 +6,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-         
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}"></a>
+            <a class="nav-link" href="{% url 'Last1Hour' %}">Last Hour</a>
           </li>
-          
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'EarthQuakes' %}">Last Day</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Last7Days' %}">Last Week</a>
+          </li>
         </ul>
+
       
       </div>
     </div>

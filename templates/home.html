@@ -1,36 +1,72 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{% block title %} EarthQuakes {% endblock %}</title>
-   
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Welcome to my page about EarthQuakes</title>
+
+  </head>
+  <body>
+  
+  
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">EarthQuakes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </div>
+    </div>
+  </nav><br/>
   {% block content %}
   <div class="home">
-    <h1 align='center'>Welcome to my page about EarthQuakes</h1>
+    <h1 align='center'>Welcome to my page about EarthQuakes</h1><br/><br/>
     <table style="width:100%;">
       <tr>
         <td style="width:33%; text-align:center;">
-          <h2>Here you can you can see last 1h EarthQuakes<h2>
-            <p>Go to <a href="/Last1Hour"> Last 1h EarthQuake Page</a></p>
+          <h2>Click for last hour EarthQuakes<h2>
+            <p> <a href="{% url 'Last1Hour' %}" class="btn btn-primary"> Last 1h EarthQuake Page</a></p>
         </td>
         <td style="width:33%; text-align:center;">
-          <h2>Here you can you can see last 24h EarthQuakes<h2>
-            <p> Go to <a href="/EarthQuakes"> Last 24h EarthQuake Page</a></p>
+          <h2>Click for last day EarthQuakes<h2>
+            <p> <a href="{% url 'EarthQuakes' %}" class="btn btn-primary"> Last 24h EarthQuake Page</a></p>
         </td>
         <td style="width:33%; text-align:center;">
-          <h2>Here you can you can see last 7 days EarthQuakes<h2>
-            <p>Go to <a href="/Last7Days"> Last 7Days EarthQuake Page</a></p>
+          <h2>Click for last week EarthQuakes<h2>
+            <p><a href="{% url 'Last7Days' %}" class="btn btn-primary"> Last 7Days EarthQuake Page</a></p>
         </td>
       </tr>
     </table>
   </div>
   {% endblock %}   
 
-  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+
 </body>
 </html>
+
+
 
 
 
