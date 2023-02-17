@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Last 24 Hours Earthquakes Data</h1>
+<table>
+  <tr>
+    <th>Place</th>
+    <th>Magnitude</th>
+  
+  </tr>
+  {% for earthquake in json_data %}
+  <tr>
+    <td>{{ earthquake.place }}</td>
+    <td>{{ earthquake.magnitude }}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+{% endblock  %}
