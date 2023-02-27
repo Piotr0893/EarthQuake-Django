@@ -3,6 +3,7 @@
 
 {% block content %}
 <h1>Last 1 Hour Earthquakes Data</h1>
+<p align ="right"> <a href="{% url 'Last1hMap' %}" class="btn btn-primary"> Last 1h EarthQuake Map</a></p>
 <table>
   <tr>
     <th>Place</th>
@@ -17,4 +18,7 @@
   </tr>
   {% endfor %}
 </table>
+
+
+
 {% endblock  %}

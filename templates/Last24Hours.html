@@ -1,8 +1,13 @@
+
 <title>Last Day EarthQuakes</title>
 {% extends "base.html" %}
 
 {% block content %}
+
 <h1>Last 24 Hours Earthquakes Data</h1>
+
+<p align ="right"> <a href="{% url 'Last24hMap' %}" class="btn btn-primary"> Last 24h EarthQuake Map</a></p>
+
 <table>
   <tr>
     <th>Place</th>
@@ -17,4 +22,6 @@
   </tr>
   {% endfor %}
 </table>
+
+
 {% endblock  %}
