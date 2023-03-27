@@ -4,21 +4,45 @@
 {% block content %}
 <h1>Last 1 Hour Earthquakes Data</h1>
 <p align ="right"> <a href="{% url 'Last1hMap' %}" class="btn btn-primary"> Last 1h EarthQuake Map</a></p>
-<table>
+<style>
+.flex-container {
+  display: flex;
+  user-select: none;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+
+}
+
+</style>
+
+<div class="flex-container">
+<div>
+  <table>
   <tr>
     <th>Place</th>
-    <th>Magnitude</th>
-
   </tr>
   {% for earthquake in json_data %}
   <tr>
     <td>{{ earthquake.place }}</td>
-    <td>{{ earthquake.magnitude }}</td>
-   
   </tr>
   {% endfor %}
 </table>
+</div>
 
-
-
+<div>
+  <table>
+  <tr>
+    <th>Magnitude</th>
+  </tr>
+  {% for earthquake in json_data %}
+  <tr>
+    <td>{{ earthquake.magnitude|floatformat:2 }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
 {% endblock  %}
